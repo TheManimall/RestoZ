@@ -1,14 +1,16 @@
-import React from 'react';
-import { Field, reduxForm } from 'redux-form';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Field, reduxForm } from "redux-form";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-import InputField from '../../../common/InputField';
+import InputField from "../../../common/InputField";
+import { signIn } from "../../../../store/actions/authActions";
 // import PropTypes from 'prop-types';
 
-import './Login.scss';
+import "./Login.scss";
 
-const Login = props => {
+let Login = ({ handleSubmit, signIn }) => {
   return (
     <div className="Login">
       <div className="bg-sector">
@@ -17,7 +19,7 @@ const Login = props => {
       <div className="main-sector">
         <div className="container">
           <h1>Вхід</h1>
-          <form>
+          <form onSubmit={handleSubmit(signIn)}>
             <Field
               name="email"
               type="email"
@@ -36,7 +38,7 @@ const Login = props => {
               <Button variant="contained">
                 <Link to="/sign-up/">Реєстрація</Link>
               </Button>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" type="submit">
                 Вхід
               </Button>
             </div>
@@ -48,6 +50,15 @@ const Login = props => {
 };
 
 // Registration.propTypes = {};
+const mapDispatchToProps = dispatch => ({
+  signIn: data => dispatch(signIn(data))
+});
+
+Login = connect(
+  null,
+  mapDispatchToProps
+)(Login);
+
 export default reduxForm({
-  form: 'login'
+  form: "login"
 })(Login);
