@@ -16,7 +16,7 @@ router.post("/add", (req, res) => {
   });
 });
 
-//GET ALL DISHS
+//GET ALL DISHES
 router.get("/all", (req, res) => {
   Dish.find({}).exec((err, records) => {
     if (err) return console.warn(err);

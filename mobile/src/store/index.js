@@ -1,12 +1,12 @@
 import { createStore, combineReducers } from 'redux';
-import restaurant from './reducers/restaurant';
+import restaurant from './reducers/restaurantReducer';
 
 const rootReducer = combineReducers({
-  restaurant: restaurant
+  restaurant: restaurant,
 });
 
 const configureStore = () => {
   return createStore(rootReducer);
-}
+};
 
 export default configureStore;
