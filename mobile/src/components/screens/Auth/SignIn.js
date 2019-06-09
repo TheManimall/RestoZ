@@ -51,7 +51,7 @@ class SignIn extends Component {
               style={styles.button}
               onPress={() => navigate("Registration")}
               block
-              secondary
+              danger
             >
               <Text>Реєстрація</Text>
             </Button>
