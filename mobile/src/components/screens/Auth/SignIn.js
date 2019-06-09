@@ -24,7 +24,7 @@ class SignIn extends Component {
   }
 
   render() {
-    console.log("LO");
+    const { navigate } = this.props.navigation;
     return (
       <Container>
         <Header>
@@ -47,7 +47,14 @@ class SignIn extends Component {
             <Button style={styles.button} block primary>
               <Text>Вхід</Text>
             </Button>
-            <Text>Реєстрація</Text>
+            <Button
+              style={styles.button}
+              onPress={() => navigate("Registration")}
+              block
+              secondary
+            >
+              <Text>Реєстрація</Text>
+            </Button>
           </Form>
         </Content>
       </Container>

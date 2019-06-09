@@ -1,24 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
-import { Button } from "native-base";
-import { Field, reduxForm } from "redux-form";
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Label
-} from "native-base";
 
-import SignUp from "./screens/Auth/SignUp";
-import SignIn from "./screens/Auth/SignIn";
+import AppNavigator from "../navigations/AppNavigator";
 
 export default class App extends React.Component {
-  state = { text: "" };
   render() {
-    return <SignUp />;
+    return <AppNavigator />;
   }
 }
 
