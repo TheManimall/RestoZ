@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const multer = require("multer");
+const cors = require("cors");
 const jwt = require("jsonwebtoken");
 
 const restaurantRouter = require("./routes/Restaurant");
@@ -13,30 +15,33 @@ const app = express();
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use("/api/restaurant", restaurantRouter);
 app.use("/api/dish", dishRouter);
 app.use("/api/user", userRouter);
 
-// app.use(function(req, res, next) {
-//   // check header or url parameters or post parameters for token
-//   var token = req.headers["authorization"];
-//   if (!token) return next(); //if no token, continue
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "public");
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + "-" + file.originalname);
+  }
+});
 
-//   token = token.replace("Bearer ", "");
+const upload = multer({ storage: storage }).single("file");
 
-//   jwt.verify(token, process.env.JWT_SECRET, function(err, user) {
-//     if (err) {
-//       return res.status(401).json({
-//         success: false,
-//         message: "Please register Log in using a valid email to submit posts"
-//       });
-//     } else {
-//       req.user = user; //set the user to req so other routes can use it
-//       next();
-//     }
-//   });
-// });
+app.post("/api/upload", function(req, res) {
+  upload(req, res, function(err) {
+    if (err instanceof multer.MulterError) {
+      return res.status(500).json(err);
+    } else if (err) {
+      return res.status(500).json(err);
+    }
+    return res.status(200).send(req.file);
+  });
+});
 
 app.listen(port, err => {
   if (err) return console.warn(err);

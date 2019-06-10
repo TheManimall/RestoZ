@@ -44,7 +44,12 @@ class SignIn extends Component {
               <Label>Пароль:</Label>
               <Input />
             </Item>
-            <Button style={styles.button} block primary>
+            <Button
+              style={styles.button}
+              onPress={() => navigate("Home")}
+              block
+              primary
+            >
               <Text>Вхід</Text>
             </Button>
             <Button

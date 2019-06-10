@@ -1,12 +1,14 @@
-import { createStore, combineReducers } from "redux";
-import restaurant from "./reducers/restaurant";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import restaurantReducer from "./reducers/restaurantReducer";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "remote-redux-devtools";
 
 const rootReducer = combineReducers({
-  restaurant
+  restaurantReducer
 });
 
 const configureStore = () => {
-  return createStore(rootReducer);
+  return createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 };
 
 export default configureStore;

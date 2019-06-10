@@ -1,5 +1,6 @@
-import React from "react";
-import { Text } from "react-native";
+import React, { Component } from "react";
+
+import TabNavigations from "../../../navigations/TabNavigations";
 
 class Home extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class Home extends Component {
     this.state = {};
   }
   render() {
-    return <Text>Home</Text>;
+    return <TabNavigations />;
   }
 }
 
