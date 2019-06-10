@@ -26,11 +26,7 @@ class SignUp extends Component {
     return (
       <Container>
         <Header>
-          <Left>
-            <Button transparent>
-              <Icon name="arrow-back" />
-            </Button>
-          </Left>
+          <Left />
           <Body>
             <Title>Реєстрація</Title>
           </Body>

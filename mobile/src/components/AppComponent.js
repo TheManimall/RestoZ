@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 
-import AppNavigator from "../navigations/AppNavigator";
+import AppNavigator from "../navigations/AppNavigations";
 
-export default class App extends React.Component {
+export default class AppComponent extends React.Component {
   render() {
     return <AppNavigator />;
   }

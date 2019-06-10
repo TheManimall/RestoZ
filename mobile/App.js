@@ -3,7 +3,7 @@ import React from "react";
 import { name as appName } from "./app.json";
 import { Provider } from "react-redux";
 
-import AppComponent from "./src/components/App";
+import AppComponent from "./src/components/AppComponent";
 
 import configureStore from "./src/store";
 
