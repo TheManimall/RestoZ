@@ -24,11 +24,7 @@ class SignIn extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    console.log("LO");
-=======
     const { navigate } = this.props.navigation;
->>>>>>> 6d7ec5ab382e31e18199adcfe372aa94d38ea3fc
     return (
       <Container>
         <Header>
@@ -51,9 +47,6 @@ class SignIn extends Component {
             <Button style={styles.button} block primary>
               <Text>Вхід</Text>
             </Button>
-<<<<<<< HEAD
-            <Text>Реєстрація</Text>
-=======
             <Button
               style={styles.button}
               onPress={() => navigate("Registration")}
@@ -62,7 +55,6 @@ class SignIn extends Component {
             >
               <Text>Реєстрація</Text>
             </Button>
->>>>>>> 6d7ec5ab382e31e18199adcfe372aa94d38ea3fc
           </Form>
         </Content>
       </Container>
