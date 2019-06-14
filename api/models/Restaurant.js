@@ -7,8 +7,8 @@ const RestaurantSchema = new Schema({
   email: String,
   phone: String,
   city: String,
-  dishes: [String],
-  orders: [String],
+  type: String,
+  imgUrl: String,
   img: { data: Buffer, contentType: String },
   rating: [Number],
   createdAt: { type: Date, default: Date.now }

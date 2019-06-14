@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "remotedev": "remotedev --hostname=192.168.100.40 --port=8000 --injectserver=reactnative"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -19,6 +20,7 @@
     "multer": "^1.4.1",
     "node-sass-middleware": "0.11.0",
     "nodemon": "^1.19.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "remotedev-server": "^0.3.1"
   }
 }

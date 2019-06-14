@@ -9,14 +9,12 @@ import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 import { connect } from 'react-redux';
 
-import { getAllDish } from '../../../../../store/actions/mainActions';
+import { getDish, deleteDish } from '../../../../../store/actions/mainActions';
 import './DishList.scss';
 
-const imgUrl = 'https://www.gastronom.ru/binfiles/images/20161017/b241aedf.jpg';
-
-const DishList = ({ getAllDish, dishes, loaded }) => {
+const DishList = ({ getDish, dishes, loaded, restId, deleteDish }) => {
   useEffect(() => {
-    getAllDish();
+    getDish(restId);
   }, []);
   return (
     <div className="DishList">
@@ -44,7 +42,11 @@ const DishList = ({ getAllDish, dishes, loaded }) => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button variant="outlined" color="default">
+              <Button
+                variant="outlined"
+                color="default"
+                onClick={() => deleteDish(el._id)}
+              >
                 видалити
               </Button>
               <Button variant="contained" color="primary">
@@ -60,10 +62,12 @@ const DishList = ({ getAllDish, dishes, loaded }) => {
 const mapStateToProps = state => ({
   dishes: state.main.dishes,
   loaded: state.main.loaded,
+  restId: state.auth.id
 });
 
 const mapDispatchToProps = {
-  getAllDish,
+  getDish,
+  deleteDish
 };
 
 export default connect(

@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e0201ed-b5c3-42e4-ae00-b92d4da35706" name="Default Changelist" comment="" />
+    <list default="true" id="1e0201ed-b5c3-42e4-ae00-b92d4da35706" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/src/component/common/SelectField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/Restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/Restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/api/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/.expo/packager-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/components/navigations/Navigations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/components/screens/Dishes/Dish.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/components/screens/Dishes/Dish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/components/screens/Restaurants/Restaurants.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/components/screens/Restaurants/Restaurants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/navigations/AppNavigations.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/navigations/AppNavigations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/store/reducers/restaurantReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/store/reducers/restaurantReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/store/types/restaurantTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/store/types/restaurantTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/component/pages/Auth/Registration/Registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/component/pages/Auth/Registration/Registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/actions/mainActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/actions/mainActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/web/yarn.lock" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/api/node_modules/" />
     <ignored path="$PROJECT_DIR$/web/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,14 +49,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile/src/components/screens/Auth/SignUp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+            <state relative-caret-position="345">
+              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/models/Restaurant.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/component/pages/Auth/Registration/Registration.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1357">
+              <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/src/component/common/SelectField.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -48,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/mobile/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -59,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/routes/User.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
+            <state relative-caret-position="1173">
               <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
@@ -90,6 +142,9 @@
         <option value="$PROJECT_DIR$/api/routes/User.js" />
         <option value="$PROJECT_DIR$/mobile/src/services/deviceStorage.js" />
         <option value="$PROJECT_DIR$/mobile/src/components/screens/Auth/SignIn.js" />
+        <option value="$PROJECT_DIR$/api/models/Restaurant.js" />
+        <option value="$PROJECT_DIR$/web/src/component/pages/Auth/Registration/Registration.js" />
+        <option value="$PROJECT_DIR$/web/src/component/common/SelectField.js" />
       </list>
     </option>
   </component>
@@ -98,21 +153,6 @@
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/RestoZ.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="317" />
@@ -135,28 +175,45 @@
             <path>
               <item name="RestoZ" type="b2602c69:ProjectViewProjectNode" />
               <item name="RestoZ" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RestoZ" type="b2602c69:ProjectViewProjectNode" />
               <item name="RestoZ" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RestoZ" type="b2602c69:ProjectViewProjectNode" />
               <item name="RestoZ" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RestoZ" type="b2602c69:ProjectViewProjectNode" />
               <item name="RestoZ" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RestoZ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RestoZ" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RestoZ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RestoZ" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,9 +224,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/madonna-2.0-react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -179,6 +237,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/web/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
@@ -207,14 +266,16 @@
       <workItem from="1559920062776" duration="3487000" />
       <workItem from="1559924502910" duration="349000" />
       <workItem from="1560150734179" duration="101000" />
+      <workItem from="1560372630936" duration="1156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3937000" />
+    <option name="totallyTimeSpent" value="5093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1610262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -306,7 +367,7 @@
     <entry file="file://$PROJECT_DIR$/mobile/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -315,7 +376,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
+        <state relative-caret-position="1173">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
@@ -329,11 +390,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/components/screens/Auth/SignUp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        <state relative-caret-position="345">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models/Restaurant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/component/pages/Auth/Registration/Registration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1357">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/component/common/SelectField.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>

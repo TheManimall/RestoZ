@@ -1,5 +1,5 @@
-import React from 'react';
-import { reduxForm, Field, arrayPush } from 'redux-form';
+import React, { useEffect } from 'react';
+import { reduxForm, Field, change } from 'redux-form';
 import { connect } from 'react-redux';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -8,11 +8,15 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import InputField from '../../../../common/InputField';
+import SelectField from '../../../../common/SelectField';
 import { addDish } from '../../../../../store/actions/mainActions';
 import './AddDish.scss';
 import AddIngredients from '../../../../common/AddIngredients';
+import { dishTypeData } from './dishTypeData';
 
-let AddDish = ({ arrayPush, addDish, handleSubmit }) => {
+let AddDish = ({ change, addDish, handleSubmit, addId, restId }) => {
+  addId(restId);
+
   return (
     <div className="AddDish">
       <Card>
@@ -21,6 +25,12 @@ let AddDish = ({ arrayPush, addDish, handleSubmit }) => {
         </Typography>
         <CardContent>
           <Field name="name" label="Назва страви" component={InputField} />
+          <Field name="type" label="Тип страви" component={SelectField}>
+            <option value="" />
+            {dishTypeData.map(item => (
+              <option value={item.value}>{item.label}</option>
+            ))}
+          </Field>
           <Field
             parse={value => Number(value)}
             name="price"
@@ -35,7 +45,8 @@ let AddDish = ({ arrayPush, addDish, handleSubmit }) => {
             label="Вага"
             component={InputField}
           />
-          <AddIngredients arrayPush={arrayPush} />
+          <Field name="imgUrl" label="Зображення" component={InputField} />
+          <AddIngredients change={change} />
         </CardContent>
         <CardActions>
           <Button
@@ -55,12 +66,15 @@ let AddDish = ({ arrayPush, addDish, handleSubmit }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  arrayPush: value => dispatch(arrayPush('AddDish', 'ingredients', value)),
-  addDish: data => dispatch(addDish(data)),
+  addId: value => dispatch(change('AddDish', 'restaurantId', value)),
+  change: value => dispatch(change('AddDish', 'ingredients', value)),
+  addDish: data => dispatch(addDish(data))
 });
 
 AddDish = connect(
-  null,
+  state => ({
+    restId: state.auth.id
+  }),
   mapDispatchToProps
 )(AddDish);
 

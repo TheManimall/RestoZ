@@ -4,17 +4,17 @@ import * as Types from '../types';
 
 //ADD DISH
 const addDishRequest = () => ({
-  type: Types.ADD_DISH_REQUEST,
+  type: Types.ADD_DISH_REQUEST
 });
 
 const addDishSuccess = data => ({
   type: Types.ADD_DISH_SUCCESS,
-  payload: data,
+  payload: data
 });
 
 const addDishFailure = err => ({
   type: Types.ADD_DISH_FAILURE,
-  err,
+  err
 });
 
 export const addDish = data => async dispatch => {
@@ -28,28 +28,55 @@ export const addDish = data => async dispatch => {
 };
 //END
 
-//GET ALL
-const getAllDishRequest = () => ({
-  type: Types.GET_ALL_DISH_REQUEST,
+//GET
+const getDishRequest = () => ({
+  type: Types.GET_DISH_REQUEST
 });
 
-const getAllDishSuccess = data => ({
-  type: Types.GET_ALL_DISH_SUCCESS,
-  payload: data,
+const getDishSuccess = data => ({
+  type: Types.GET_DISH_SUCCESS,
+  payload: data
 });
 
-const getAllDishFailure = err => ({
-  type: Types.GET_ALL_DISH_FAILURE,
-  err,
+const getDishFailure = err => ({
+  type: Types.GET_DISH_FAILURE,
+  err
 });
 
-export const getAllDish = () => async dispatch => {
-  dispatch(getAllDishRequest);
+export const getDish = value => async dispatch => {
+  dispatch(getDishRequest());
   try {
-    const res = await axios.get('/api/dish/all');
-    dispatch(getAllDishSuccess(res.data));
+    const res = await axios.get(`api/dish/get/${value}`);
+    dispatch(getDishSuccess(res.data));
   } catch (err) {
-    dispatch(getAllDishFailure(err));
+    console.error(err.response);
+    dispatch(getDishFailure(err));
   }
 };
 //END
+
+const deleteDishRequest = () => ({
+  type: Types.DELETE_DISH_REQUEST
+});
+
+const deleteDishSuccess = data => ({
+  type: Types.DELETE_DISH_SUCCESS,
+  payload: data
+});
+
+const deleteDishFailure = err => ({
+  type: Types.DELETE_DISH_FAILURE,
+  err
+});
+
+export const deleteDish = value => async dispatch => {
+  dispatch(deleteDishRequest());
+  try {
+    const res = await axios.get(`api/dish/delete/${value}`);
+    dispatch(deleteDishSuccess(res.data));
+  } catch (err) {
+    console.error(err.response);
+
+    dispatch(deleteDishFailure(err));
+  }
+};

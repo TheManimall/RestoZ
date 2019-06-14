@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import TextField from '@material-ui/core/TextField';
 import Chip from '@material-ui/core/Chip';
 
-const AddIngredients = ({ arrayPush }) => {
+const AddIngredients = ({ change }) => {
   const [tag, setTag] = useState('');
   const [tagsArr, changeArr] = useState([]);
 
@@ -12,11 +12,14 @@ const AddIngredients = ({ arrayPush }) => {
 
   const handleReset = () => setTag('');
 
+  useEffect(() => {
+    change(tagsArr);
+  }, [tagsArr]);
+
   const handleAddTag = e =>
     e.key === 'Enter' &&
     changeArr(
       tagsArr.concat(tag),
-      arrayPush(tag),
       handleReset()
       // e.preventDefault()
     );

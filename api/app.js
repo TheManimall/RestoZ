@@ -3,11 +3,13 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const multer = require("multer");
 const cors = require("cors");
+const remotedev = require("remotedev-server");
 const jwt = require("jsonwebtoken");
 
 const restaurantRouter = require("./routes/Restaurant");
 const dishRouter = require("./routes/Dish");
 const userRouter = require("./routes/User");
+const orderRouter = require("./routes/Order");
 
 const port = process.env.PORT || 5050;
 const app = express();
@@ -20,6 +22,9 @@ app.use(cors());
 app.use("/api/restaurant", restaurantRouter);
 app.use("/api/dish", dishRouter);
 app.use("/api/user", userRouter);
+app.use("/api/order", orderRouter);
+
+remotedev({ hostname: "192.168.100.40", port: 8000 });
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

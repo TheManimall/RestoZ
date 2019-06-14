@@ -17,6 +17,8 @@ router.post("/register", (req, res) => {
   Restaurant.create(
     {
       name: req.body.name,
+      type: req.body.type,
+      imgUrl: req.body.imgUrl,
       email: req.body.email,
       password: hashedPass
     },
@@ -45,7 +47,9 @@ router.post("/login", (req, res) => {
     const token = jwt.sign({ id: rest._id }, config.secret, {
       expiresIn: 86400
     });
-    res.status(200).send({ auth: true, token: token });
+    res
+      .status(200)
+      .send({ auth: true, token: token, id: rest._id, name: rest.name });
   });
 });
 

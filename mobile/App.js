@@ -1,17 +1,20 @@
-import { AppRegistry } from "react-native";
+import { createStore, applyMiddleware } from "redux";
 import React from "react";
-import { name as appName } from "./app.json";
 import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "remote-redux-devtools";
 
-import AppComponent from "./src/components/AppComponent";
+import rootReducer from "./src/store";
+import AppNavigations from "./src/navigations/AppNavigations";
 
-import configureStore from "./src/store";
-
-const store = configureStore();
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 const App = () => (
   <Provider store={store}>
-    <AppComponent />
+    <AppNavigations />
   </Provider>
 );
 

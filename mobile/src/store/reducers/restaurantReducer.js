@@ -1,8 +1,8 @@
-import * as Types from '../types';
+import * as Types from "../types";
 
 const initialState = {
   restaurant: [],
-  loaded: false,
+  loaded: false
 };
 
 export default (state = initialState, action) => {
@@ -10,18 +10,18 @@ export default (state = initialState, action) => {
     case Types.GET_ALL_RESTAURANT_REQUEST:
       return {
         ...state,
-        loaded: false,
+        loaded: false
       };
     case Types.GET_ALL_RESTAURANT_SUCCESS:
       return {
         ...state,
         restaurant: action.payload.data,
-        loaded: true,
+        loaded: true
       };
     case Types.GET_ALL_RESTAURANT_FAILURE:
       return {
         ...state,
-        loaded: true,
+        loaded: true
       };
     default:
       return state;

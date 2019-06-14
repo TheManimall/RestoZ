@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Text } from "react-native";
 
 import DishItem from "./DishItem";
+import { getAllRestaurant } from "../../../store/actions/restaurantActions";
+import { connect } from "react-redux";
 import { ScrollView } from "react-native-gesture-handler";
 
 class Dish extends Component {
@@ -9,6 +11,13 @@ class Dish extends Component {
     super(props);
     this.state = {};
   }
+
+  componentDidMount() {
+    const { getAllRestaurant } = this.props;
+
+    getAllRestaurant();
+  }
+
   render() {
     return (
       <ScrollView>
@@ -33,4 +42,11 @@ class Dish extends Component {
   }
 }
 
-export default Dish;
+const mapDispatchToProps = {
+  getAllRestaurant
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Dish);

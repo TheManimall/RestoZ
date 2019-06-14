@@ -6,7 +6,7 @@ import './Buttons.scss';
 
 const Buttons = () => {
   return (
-    <div className="Button">
+    <div className="Button" style={{ margin: '10px' }}>
       <Link to="/add-dish">
         <Button variant="contained" color="primary">
           Додати страву

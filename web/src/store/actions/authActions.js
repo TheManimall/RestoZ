@@ -4,12 +4,12 @@ import * as Types from '../types';
 
 const signInSuccess = data => ({
   type: Types.SIGN_IN_SUCCESS,
-  payload: data,
+  payload: data
 });
 
 const signInFailure = err => ({
   type: Types.SIGN_IN_FAILURE,
-  err,
+  err
 });
 
 export const signIn = data => async dispatch => {
@@ -23,12 +23,12 @@ export const signIn = data => async dispatch => {
 
 const signUpSuccess = data => ({
   type: Types.SIGN_UP_SUCCESS,
-  payload: data,
+  payload: data
 });
 
 const signUpFailure = err => ({
   type: Types.SIGN_UP_FAILURE,
-  err,
+  err
 });
 
 export const signUp = data => async dispatch => {
@@ -39,3 +39,7 @@ export const signUp = data => async dispatch => {
     dispatch(signUpFailure(err));
   }
 };
+
+export const signOut = () => ({
+  type: Types.SIGN_OUT
+});

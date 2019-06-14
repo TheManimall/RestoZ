@@ -16,13 +16,31 @@ router.post("/add", (req, res) => {
   });
 });
 
+//GET ALL DISHES FOR RESTAURANT ID
+router.get("/get/:id", (req, res) => {
+  console.log(req.params.id);
+  Dish.find({ restaurantId: req.params.id }).exec((err, records) => {
+    if (err) return console.warn(err);
+
+    res.send(records);
+  });
+});
+
 //GET ALL DISHES
 router.get("/all", (req, res) => {
   Dish.find({}).exec((err, records) => {
     if (err) return console.warn(err);
 
-    console.log(records);
     res.send(records);
+  });
+});
+
+//DELETE DISH
+router.get("/delete/:id", (req, res) => {
+  Dish.findByIdAndRemove(req.params.id, (err, dish) => {
+    if (err) return console.warn(err);
+
+    res.send({ message: "Страву успішно видалено", id: dish._id });
   });
 });
 

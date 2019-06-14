@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const OrderSchema = new Schema({
   dishId: [String],
-  restId: String,
+  restId: [String],
   userId: String,
   totalPrice: Number,
   createdAt: { type: Date, default: Date.now }

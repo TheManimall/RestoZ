@@ -1,20 +1,22 @@
-import React from "react";
-import { Field, reduxForm } from "redux-form";
-import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
-import InputField from "../../../common/InputField";
-import { signUp } from "../../../../store/actions/authActions";
+import InputField from '../../../common/InputField';
+import SelectField from '../../../common/SelectField';
+import { signUp } from '../../../../store/actions/authActions';
+import { selectData } from '../../../helpers/selectData';
 // import PropTypes from 'prop-types';
 
-import "./Registration.scss";
+import './Registration.scss';
 
 let Registration = ({ signUp, handleSubmit, history }) => {
   const _onSubmit = data => {
     signUp(data);
-    history.push("/");
+    history.push('/');
   };
 
   return (
@@ -42,6 +44,19 @@ let Registration = ({ signUp, handleSubmit, history }) => {
               type="password"
               placeholder="Ваш пароль"
               label="Ваш пароль"
+              component={InputField}
+            />
+            <Field name="type" label="Тип закладу" component={SelectField}>
+              <option value="" />
+              {selectData.map(item => (
+                <option value={item.value}>{item.label}</option>
+              ))}
+            </Field>
+            <Field
+              name="imgUrl"
+              type="text"
+              placeholder="Посилання на зображення"
+              label="Посилання на зображення"
               component={InputField}
             />
             <div className="buttons">
@@ -75,5 +90,5 @@ Registration = connect(
 
 // Registration.propTypes = {};
 export default reduxForm({
-  form: "registration"
+  form: 'registration'
 })(Registration);
