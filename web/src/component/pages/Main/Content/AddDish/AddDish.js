@@ -13,6 +13,7 @@ import { addDish } from '../../../../../store/actions/mainActions';
 import './AddDish.scss';
 import AddIngredients from '../../../../common/AddIngredients';
 import { dishTypeData } from './dishTypeData';
+import { required, email, number } from '../validation';
 
 let AddDish = ({ change, addDish, handleSubmit, addId, restId }) => {
   addId(restId);
@@ -24,8 +25,17 @@ let AddDish = ({ change, addDish, handleSubmit, addId, restId }) => {
           Додати страву
         </Typography>
         <CardContent>
-          <Field name="name" label="Назва страви" component={InputField} />
-          <Field name="type" label="Тип страви" component={SelectField}>
+          <Field
+            name="name"
+            label="Назва страви"
+            component={InputField}
+            validate={[required]}
+          />
+          <Field
+            name="type"
+            label="Тип страви"
+            component={SelectField}
+          >
             <option value="" />
             {dishTypeData.map(item => (
               <option value={item.value}>{item.label}</option>
@@ -34,16 +44,18 @@ let AddDish = ({ change, addDish, handleSubmit, addId, restId }) => {
           <Field
             parse={value => Number(value)}
             name="price"
-            type="number"
+            type="text"
             label="Ціна"
             component={InputField}
+            validate={[required, number]}
           />
           <Field
             parse={value => Number(value)}
             name="weight"
-            type="number"
+            type="text"
             label="Вага"
             component={InputField}
+            validate={[required, number]}
           />
           <Field name="imgUrl" label="Зображення" component={InputField} />
           <AddIngredients change={change} />

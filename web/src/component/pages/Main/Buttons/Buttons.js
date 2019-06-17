@@ -17,6 +17,11 @@ const Buttons = () => {
           Мої страви
         </Button>
       </Link>
+      <Link to="/orders">
+        <Button variant="contained" color=" secondary">
+          Замовлення
+        </Button>
+      </Link>
     </div>
   );
 };

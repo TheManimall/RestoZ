@@ -9,6 +9,7 @@ import InputField from '../../../common/InputField';
 import SelectField from '../../../common/SelectField';
 import { signUp } from '../../../../store/actions/authActions';
 import { selectData } from '../../../helpers/selectData';
+import { required, email } from '../../Main/Content/validation';
 // import PropTypes from 'prop-types';
 
 import './Registration.scss';
@@ -31,6 +32,7 @@ let Registration = ({ signUp, handleSubmit, history }) => {
               placeholder="Назва закладу"
               label="Назва закладу"
               component={InputField}
+              validate={[ required ]}
             />
             <Field
               name="email"
@@ -38,6 +40,7 @@ let Registration = ({ signUp, handleSubmit, history }) => {
               placeholder="Електронна адреса"
               label="Електронна адреса"
               component={InputField}
+              validate={[ required, email ]}
             />
             <Field
               name="password"
@@ -45,6 +48,7 @@ let Registration = ({ signUp, handleSubmit, history }) => {
               placeholder="Ваш пароль"
               label="Ваш пароль"
               component={InputField}
+              validate={[ required ]}
             />
             <Field name="type" label="Тип закладу" component={SelectField}>
               <option value="" />
@@ -58,6 +62,7 @@ let Registration = ({ signUp, handleSubmit, history }) => {
               placeholder="Посилання на зображення"
               label="Посилання на зображення"
               component={InputField}
+              validate={[ required ]}
             />
             <div className="buttons">
               <Button variant="contained">

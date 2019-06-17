@@ -44,4 +44,15 @@ router.get("/delete/:id", (req, res) => {
   });
 });
 
+router.get("/get/:id", (req, res) => {
+  console.log(req.params.id);
+  Dish.find({ restaurantId: req.params.id }).exec((err, records) => {
+    if (err) return console.warn(err);
+
+    res.send(records);
+  });
+});
+
+
+
 module.exports = router;

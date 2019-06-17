@@ -5,17 +5,17 @@ const InputField = ({
   input,
   label,
   type,
-  meta: { touched, error },
+  meta: { touched, error, warning },
   ...custom
 }) => (
-  <div className="InputField">
+  <div className="InputField" style={{flexDirection: 'column', color: 'red'}}>
     <TextField
       {...input}
       {...custom}
       label={`${label}:`}
       type={type}
-      errorText={touched && error}
     />
+    {touched && ((error && <p>{error}</p>) || (warning && <p>{warning}</p>))} 
   </div>
 );
 

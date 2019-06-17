@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 
 import InputField from "../../../common/InputField";
 import { signIn } from "../../../../store/actions/authActions";
+import { required, email } from '../../Main/Content/validation';
 // import PropTypes from 'prop-types';
 
 import "./Login.scss";
@@ -26,6 +27,7 @@ let Login = ({ handleSubmit, signIn }) => {
               placeholder="Електронна адреса"
               label="Електронна адреса"
               component={InputField}
+              validate={[ required, email ]}
             />
             <Field
               name="password"
@@ -33,6 +35,7 @@ let Login = ({ handleSubmit, signIn }) => {
               placeholder="Ваш пароль"
               label="Ваш пароль"
               component={InputField}
+              validate={[ required ]}
             />
             <div className="buttons">
               <Button variant="contained">

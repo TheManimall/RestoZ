@@ -80,3 +80,29 @@ export const deleteDish = value => async dispatch => {
     dispatch(deleteDishFailure(err));
   }
 };
+
+const getOrderRequest = () => ({
+  type: Types.GET_ORDER_REQUEST
+});
+
+const getOrderSuccess = data => ({
+  type: Types.GET_ORDER_SUCCESS,
+  payload: data
+});
+
+const getOrderFailure = err => ({
+  type: Types.GET_ORDER_FAILURE,
+  err
+});
+
+export const getOrder = value => async dispatch => {
+  dispatch(getOrderRequest());
+  try {
+    const res = await axios.get(`api/order/get/${value}`);
+    dispatch(getOrderSuccess(res.data));
+  } catch (err) {
+    console.error(err.response);
+
+    dispatch(getOrderFailure(err));
+  }
+};

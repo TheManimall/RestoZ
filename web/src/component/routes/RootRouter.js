@@ -16,6 +16,11 @@ const RootRouter = ({ isAuth }) => {
   } else {
     return <Auth />;
   }
+  // if (true) {
+  //   return <Main />;
+  // } else {
+  //   return <Auth />;
+  // }
 };
 
 export default withRouter(connect(mapStateToProps)(RootRouter));

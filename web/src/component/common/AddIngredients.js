@@ -45,7 +45,7 @@ const AddIngredients = ({ change }) => {
       >
         <AddIcon />
       </Fab>
-      <div className="ingredients-field">
+      <div className="ingredients-field" style={{widht: '90%', display: 'flex', flexWrap: 'wrap'}}>
         {tagsArr.map((el, i) => (
           <Chip
             label={el}
