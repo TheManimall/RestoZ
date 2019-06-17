@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-import * as Types from "../types";
+import * as Types from '../types';
 
 const signInSuccess = data => ({
   type: Types.SIGN_IN_SUCCESS,
@@ -14,7 +14,7 @@ const signInFailure = err => ({
 
 export const signIn = data => async dispatch => {
   try {
-    const res = await axios.post("/api/restaurant/login", data);
+    const res = await axios.post('/api/restaurant/login', data);
     dispatch(signInSuccess(res.data));
   } catch (err) {
     dispatch(signInFailure(err));
@@ -33,9 +33,13 @@ const signUpFailure = err => ({
 
 export const signUp = data => async dispatch => {
   try {
-    const res = await axios.post("/api/restaurant/register", data);
+    const res = await axios.post('/api/restaurant/register', data);
     dispatch(signUpSuccess(res.data));
   } catch (err) {
     dispatch(signUpFailure(err));
   }
 };
+
+export const signOut = () => ({
+  type: Types.SIGN_OUT
+});

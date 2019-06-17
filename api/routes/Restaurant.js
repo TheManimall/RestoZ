@@ -2,20 +2,23 @@ const router = require("express").Router();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+
 mongoose.set("useFindAndModify", false);
 const config = require("../config");
 
 const Restaurant = require("../models/Restaurant");
 
-//CRUD
+// CRUD
 
-//REGISTRATION
+// REGISTRATION
 router.post("/register", (req, res) => {
   const hashedPass = bcrypt.hashSync(req.body.password, 8);
 
   Restaurant.create(
     {
       name: req.body.name,
+      type: req.body.type,
+      imgUrl: req.body.imgUrl,
       email: req.body.email,
       password: hashedPass
     },
@@ -30,7 +33,7 @@ router.post("/register", (req, res) => {
   );
 });
 
-//LOGIN
+// LOGIN
 router.post("/login", (req, res) => {
   Restaurant.findOne({ email: req.body.email }, (err, rest) => {
     if (err) return res.status(500).send("Error on the server.");
@@ -44,11 +47,13 @@ router.post("/login", (req, res) => {
     const token = jwt.sign({ id: rest._id }, config.secret, {
       expiresIn: 86400
     });
-    res.status(200).send({ auth: true, token: token });
+    res
+      .status(200)
+      .send({ auth: true, token: token, id: rest._id, name: rest.name });
   });
 });
 
-//GET ALL
+// GET ALL
 router.get("/all", (req, res) => {
   Restaurant.find({}).exec((err, records) => {
     if (err) return console.warn(err);
@@ -58,6 +63,6 @@ router.get("/all", (req, res) => {
   });
 });
 
-//DELETE ALL
+// DELETE ALL
 
 module.exports = router;

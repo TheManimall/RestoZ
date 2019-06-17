@@ -1,0 +1,12 @@
+.DishList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .MuiCard-root-172 {
+    overflow: hidden;
+    width: 250px;
+    margin: 15px;
+  }
+}

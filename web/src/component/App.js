@@ -1,7 +1,8 @@
 import React from 'react';
+import RootRouter from './routes/RootRouter';
 
-import Auth from './pages/Auth/Auth';
-
-const App = () => <Auth />;
+function App() {
+  return <RootRouter />;
+}
 
 export default App;

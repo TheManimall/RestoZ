@@ -5,6 +5,7 @@ const OrderSchema = new Schema({
   dishId: [String],
   restId: String,
   userId: String,
+  address: String,
   totalPrice: Number,
   createdAt: { type: Date, default: Date.now }
 });
